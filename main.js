@@ -5,6 +5,9 @@ function main() {
     var vertices = [
         // number 3
         0.0, 0.6, 0.4, 0.6, 0.1, 0.4, 0.4, 0.4, 0.4, 0.1, -0.0, 0.1,
+        // number 0
+        0.5, 0.6, 0.5, 0.1, 0.7, 0.1, 0.7, 0.6, 0.5, 0.6,
+
     ];
 
     //create a linked list for storing the vertices data in the GPU realm
@@ -63,4 +66,5 @@ function main() {
 
     // gl.drawArrays(gl.LINE_STRIP, 0, 14);
     gl.drawArrays(gl.LINE_STRIP, 0, 6);
+    gl.drawArrays(gl.LINE_STRIP, 6, 5);
 }
