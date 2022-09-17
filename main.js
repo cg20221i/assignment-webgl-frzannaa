@@ -7,6 +7,14 @@ function main() {
         0.0, 0.6, 0.4, 0.6, 0.1, 0.4, 0.4, 0.4, 0.4, 0.1, -0.0, 0.1,
         // number 0
         0.5, 0.6, 0.5, 0.1, 0.7, 0.1, 0.7, 0.6, 0.5, 0.6,
+        // A LEFT
+        -0.6, -0.2, //A
+        -0.8, -0.8, //B
+        -0.75, -0.8, //C
+        -0.75, -0.8, //D
+        -0.6, -0.35, //E
+        -0.6, -0.2, //F
+
 
     ];
 
@@ -67,4 +75,5 @@ function main() {
     // gl.drawArrays(gl.LINE_STRIP, 0, 14);
     gl.drawArrays(gl.LINE_STRIP, 0, 6);
     gl.drawArrays(gl.LINE_STRIP, 6, 5);
+    gl.drawArrays(gl.TRIANGLES, 11, 6);
 }
