@@ -15,6 +15,15 @@ function main() {
         -0.6, -0.35, //E
         -0.6, -0.2, //F
 
+        // A RIGHT 
+        -0.6, -0.2, //A
+        -0.4, -0.8, //B
+        -0.45, -0.8, //C
+        -0.45, -0.8, //D
+        -0.6, -0.35, //E
+        -0.6, -0.2, //F
+
+
 
     ];
 
@@ -76,4 +85,5 @@ function main() {
     gl.drawArrays(gl.LINE_STRIP, 0, 6);
     gl.drawArrays(gl.LINE_STRIP, 6, 5);
     gl.drawArrays(gl.TRIANGLES, 11, 6);
+    gl.drawArrays(gl.TRIANGLES, 17, 6);
 }
