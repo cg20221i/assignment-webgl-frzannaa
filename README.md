@@ -12,4 +12,4 @@ Farzana Afifah Razak
 
 ### Screenshot
 
-![Screenshot]![30AK jpg](https://user-images.githubusercontent.com/81352414/190914086-ade07c14-feee-4007-b0a4-e613d706b5e9.jpeg)
+![30AK jpg](https://user-images.githubusercontent.com/81352414/190914086-ade07c14-feee-4007-b0a4-e613d706b5e9.jpeg)
