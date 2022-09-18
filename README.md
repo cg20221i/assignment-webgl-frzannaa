@@ -1,5 +1,4 @@
 # assignment-webgl-frzannaa
-assignment-webgl-frzannaa created by GitHub Classroom
 
 Farzana Afifah Razak
 5025201130
