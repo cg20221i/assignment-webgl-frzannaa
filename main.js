@@ -4,12 +4,26 @@ function main() {
 
     var vertices = [
         // number 3
-        0.0, 0.6, 0.4, 0.6, 0.1, 0.4, 0.4, 0.4, 0.4, 0.1, -0.0, 0.1,
+        0.0, 0.6,
+        0.4, 0.6,
+        0.1, 0.4,
+        0.4, 0.4,
+        0.4, 0.1, -0.0, 0.1,
+
         // number 0
-        0.5, 0.6, 0.5, 0.1, 0.7, 0.1, 0.7, 0.6, 0.5, 0.6,
+        0.5, 0.6,
+        0.5, 0.1,
+        0.7, 0.1,
+        0.7, 0.6,
+        0.5, 0.6,
+
+        //
+        0.6, 0.2,
+        0.6, 0.5,
+
         // A LEFT
         -0.6, -0.2, //A
-        -0.8, -0.8, //B
+        -0.9, -0.8, //B
         -0.75, -0.8, //C
         -0.75, -0.8, //D
         -0.6, -0.35, //E
@@ -17,7 +31,7 @@ function main() {
 
         // A RIGHT 
         -0.6, -0.2, //A
-        -0.4, -0.8, //B
+        -0.3, -0.8, //B
         -0.45, -0.8, //C
         -0.45, -0.8, //D
         -0.6, -0.35, //E
@@ -27,11 +41,19 @@ function main() {
         -0.65, -0.5, //A
         -0.5, -0.6, //B
         -0.55, -0.5, //C
-
-        // A MIDDLE (Left)
         -0.65, -0.5, //A
         -0.5, -0.6, //B
         -0.7, -0.6, //C
+
+        // K LEFT
+        -0.2, -0.8, -0.1, -0.8, -0.2, -0.2, -0.1, -0.2, -0.1, -0.8, -0.2, -0.2,
+
+        //
+        0.1, -0.2, -0.1, -0.5, 0.2, -0.3, -0.1, -0.4, -0.1, -0.5, -0.1, -0.4,
+
+        //
+        0.1, -0.8, -0.1, -0.5,
+        0.2, -0.7, -0.1, -0.4, -0.1, -0.5, -0.1, -0.4,
 
 
     ];
@@ -45,7 +67,7 @@ function main() {
     var vertexShaderCode = `
     attribute vec2 aPosition;
         void main () {
-            gl_PointSize = 10.0;
+            gl_PointSize = 15.0;
             gl_Position = vec4(aPosition, 0.0, 1.0);
     }
     `;
@@ -85,16 +107,18 @@ function main() {
     gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(aPosition);
 
-    gl.clearColor(1.0, 0.75, 0.79, 1.0);
+    gl.clearColor(0.0, 0.75, 0.79, 1.0);
     //R,G,B,Alpha
 
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // gl.drawArrays(gl.LINE_STRIP, 0, 14);
-    gl.drawArrays(gl.LINE_STRIP, 0, 6);
-    gl.drawArrays(gl.LINE_STRIP, 6, 5);
-    gl.drawArrays(gl.TRIANGLES, 11, 6);
-    gl.drawArrays(gl.TRIANGLES, 17, 6);
-    gl.drawArrays(gl.TRIANGLES, 23, 3);
-    gl.drawArrays(gl.TRIANGLES, 26, 3);
+    gl.drawArrays(gl.LINE_STRIP, 0, 6); // 3
+    gl.drawArrays(gl.LINE_STRIP, 6, 5); // 0
+    gl.drawArrays(gl.LINE_STRIP, 11, 2);
+    gl.drawArrays(gl.TRIANGLES, 13, 18); //A
+    gl.drawArrays(gl.TRIANGLES, 31, 6); //K kiri
+    gl.drawArrays(gl.TRIANGLE_FAN, 37, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 43, 6);
+
 }
