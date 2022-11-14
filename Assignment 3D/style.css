@@ -1,0 +1,15 @@
+#myCanvas {
+    padding-left: 24em;
+}
+
+body {
+    background-color: hsl(156, 25%, 36%);
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: bold;
+    color: #171918;
+    text-align: justify;
+    text-align-last: center;
+}
